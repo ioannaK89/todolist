@@ -3,7 +3,7 @@
             [ragtime.repl :as repl]))
 
 (defn load-config  []
-  {:datastore  (jdbc/sql-database  "jdbc:h2:file:example.h2")
+  {:datastore  (jdbc/sql-database  "jdbc:postrgresql://localhost/todolist")
    :migrations  (jdbc/load-resources  "migrations")})
 
 (defn migrate  []
